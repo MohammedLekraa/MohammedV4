@@ -1,0 +1,924 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="description"
+    content="Mohammed Lekraa — Telecommunications Engineer focused on embedded systems, electronics, firmware, RF and automotive technology."
+  >
+
+  <title>Mohammed Lekraa // Engineering Portfolio</title>
+
+  <link rel="stylesheet" href="styles.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+</head>
+
+<body>
+
+  <!-- =========================================================
+       LOADER
+  ========================================================== -->
+
+  <div id="loader" aria-hidden="true">
+    <div class="loader-content">
+
+      <div class="loader-top">
+        <span>SYSTEM.INIT</span>
+        <span>ML_2026</span>
+      </div>
+
+      <div class="loader-text">
+        INITIALIZING ENGINEERING PORTFOLIO
+      </div>
+
+      <div class="loader-bar-bg">
+        <div class="loader-bar-fill" id="loader-fill"></div>
+      </div>
+
+      <div class="loader-bottom">
+        <span id="loader-status">BOOT_SEQUENCE</span>
+        <span id="loader-counter">0%</span>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- =========================================================
+       NAVIGATION
+  ========================================================== -->
+
+  <nav class="navbar" id="navbar">
+
+    <a href="#home" class="nav-logo">
+      ML<span>//</span>ENGINEERING
+    </a>
+
+    <div class="nav-links">
+
+      <a href="#home" class="nav-btn active" data-section="home">
+        <span>01</span> HOME
+      </a>
+
+      <a href="#projects" class="nav-btn" data-section="projects">
+        <span>02</span> PROJECTS
+      </a>
+
+      <a href="#about" class="nav-btn" data-section="about">
+        <span>03</span> ABOUT
+      </a>
+
+      <a href="#skills" class="nav-btn" data-section="skills">
+        <span>04</span> SKILLS
+      </a>
+
+      <a href="#contact" class="nav-btn" data-section="contact">
+        <span>05</span> CONTACT
+      </a>
+
+    </div>
+
+    <button class="mobile-menu" id="mobile-menu" aria-label="Open navigation">
+      <span></span>
+      <span></span>
+    </button>
+
+  </nav>
+
+
+  <!-- =========================================================
+       HOME / HERO
+  ========================================================== -->
+
+  <main>
+
+    <section id="home" class="hero section-anchor">
+
+      <div class="hero-grid">
+
+        <!-- LEFT -->
+
+        <div class="hero-left">
+
+          <div class="eyebrow reveal-item">
+            <span class="status-dot"></span>
+            ENGINEERING PORTFOLIO // 2026
+          </div>
+
+          <p class="hero-intro reveal-item">
+            Hi, I'm Mohammed.
+          </p>
+
+          <h1 class="hero-title reveal-item">
+            BUILDING AT THE
+            <span>EDGE OF HARDWARE</span>
+          </h1>
+
+          <p class="hero-description reveal-item">
+            Telecommunications Engineering student focused on
+            <strong>embedded systems, firmware, electronics and RF</strong>,
+            with a particular interest in automotive and connected technologies.
+          </p>
+
+          <div class="hero-actions reveal-item">
+
+            <a href="#projects" class="btn-primary">
+              EXPLORE PROJECTS
+              <span>↓</span>
+            </a>
+
+            <a href="#contact" class="btn-secondary">
+              GET IN TOUCH
+              <span>↗</span>
+            </a>
+
+          </div>
+
+          <div class="hero-stack reveal-item">
+
+            <span>C/C++</span>
+            <span>STM32</span>
+            <span>ESP32</span>
+            <span>PCB</span>
+            <span>RF</span>
+            <span>RADAR</span>
+          </div>
+
+        </div>
+
+
+        <!-- RIGHT -->
+
+        <div class="hero-right reveal-item">
+
+          <div class="engineering-card" id="tilt-card">
+
+            <div class="card-grid"></div>
+
+            <div class="card-header">
+              <span>SYS_01</span>
+              <span>ENGINEERING_PROFILE</span>
+            </div>
+
+            <div class="card-main">
+
+              <div class="crosshair crosshair-one"></div>
+              <div class="crosshair crosshair-two"></div>
+
+              <div class="card-code">
+                <span>FOCUS</span>
+                <strong>EMBEDDED</strong>
+
+                <span>DOMAIN</span>
+                <strong>HARDWARE</strong>
+
+                <span>INTERFACE</span>
+                <strong>HW ↔ SW</strong>
+              </div>
+
+              <div class="card-symbol">
+                <div class="chip">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <div class="chip-core">ML</div>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+              </div>
+
+              <div class="card-coordinates">
+                41°08'N<br>
+                1°14'E
+              </div>
+
+            </div>
+
+            <div class="card-footer">
+              <span>MOHAMMED LEKRAA</span>
+
+              <span class="system-status">
+                <i></i>
+                SYSTEM ONLINE
+              </span>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="hero-scroll">
+        <span>SCROLL TO EXPLORE</span>
+        <div class="scroll-line"></div>
+      </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         PROJECTS
+    ========================================================== -->
+
+    <section id="projects" class="section projects-section section-anchor reveal">
+
+      <div class="section-heading">
+
+        <div>
+          <span class="section-index">02 // SELECTED WORK</span>
+          <h2 class="section-title">
+            PROJECTS<span>.</span>
+          </h2>
+        </div>
+
+        <p class="section-heading-description">
+          Engineering projects combining hardware, firmware,
+          sensors, communication and physical systems.
+        </p>
+
+      </div>
+
+
+      <div class="projects-grid">
+
+        <!-- PROJECT 01 -->
+
+        <article class="project-card project-featured">
+
+          <div class="project-visual">
+
+            <span class="project-number">PROJECT_01</span>
+
+            <div class="visual-lines"></div>
+
+            <div class="robot-visual">
+
+              <div class="robot-arm">
+                <div class="joint joint-1"></div>
+                <div class="arm-segment segment-1"></div>
+                <div class="joint joint-2"></div>
+                <div class="arm-segment segment-2"></div>
+                <div class="joint joint-3"></div>
+                <div class="arm-segment segment-3"></div>
+                <div class="robot-hand"></div>
+              </div>
+
+              <div class="sensor-node sensor-node-one">
+                FLEX
+              </div>
+
+              <div class="sensor-node sensor-node-two">
+                IMU
+              </div>
+
+            </div>
+
+            <div class="visual-label label-one">
+              FLEX SENSORS
+            </div>
+
+            <div class="visual-label label-two">
+              MPU6050
+            </div>
+
+            <div class="visual-label label-three">
+              SERVO CONTROL
+            </div>
+
+            <div class="view-project">
+              VIEW PROJECT <span>↗</span>
+            </div>
+
+          </div>
+
+
+          <div class="project-info">
+
+            <div class="project-meta">
+              <span>001</span>
+              <span>EMBEDDED // ROBOTICS</span>
+            </div>
+
+            <h3 class="project-title">
+              Sensorized Glove Controlled Robotic Arm
+            </h3>
+
+            <p class="project-desc">
+              A robotic system designed to reproduce hand and wrist
+              movements through a sensorized glove, embedded controllers,
+              inertial sensing and servo actuation.
+            </p>
+
+            <div class="project-tags">
+              <span>C/C++</span>
+              <span>ESP32</span>
+              <span>MPU6050</span>
+              <span>FLEX SENSORS</span>
+              <span>BLUETOOTH</span>
+              <span>SERVO CONTROL</span>
+            </div>
+
+            <a href="#" class="project-link">
+              EXPLORE PROJECT
+              <span>↗</span>
+            </a>
+
+          </div>
+
+        </article>
+
+
+        <!-- PROJECT 02 -->
+
+        <article class="project-card">
+
+          <div class="project-visual visual-electronics">
+
+            <span class="project-number">PROJECT_02</span>
+
+            <div class="pcb-visual">
+
+              <div class="pcb-chip"></div>
+
+              <div class="pcb-trace trace-1"></div>
+              <div class="pcb-trace trace-2"></div>
+              <div class="pcb-trace trace-3"></div>
+              <div class="pcb-trace trace-4"></div>
+
+              <div class="pcb-component component-1"></div>
+              <div class="pcb-component component-2"></div>
+              <div class="pcb-component component-3"></div>
+
+            </div>
+
+            <div class="visual-label label-pcb">
+              POWER / CONTROL
+            </div>
+
+            <div class="view-project">
+              VIEW PROJECT <span>↗</span>
+            </div>
+
+          </div>
+
+          <div class="project-info">
+
+            <div class="project-meta">
+              <span>002</span>
+              <span>ELECTRONICS // PCB</span>
+            </div>
+
+            <h3 class="project-title">
+              Power & Control Architecture
+            </h3>
+
+            <p class="project-desc">
+              Electronics architecture focused on separating control
+              and power domains to improve system stability, reduce
+              interference and provide cleaner power delivery.
+            </p>
+
+            <div class="project-tags">
+              <span>PCB</span>
+              <span>POWER</span>
+              <span>ESP32</span>
+              <span>ISOLATION</span>
+              <span>DEBUGGING</span>
+            </div>
+
+            <a href="#" class="project-link">
+              EXPLORE PROJECT
+              <span>↗</span>
+            </a>
+
+          </div>
+
+        </article>
+
+
+        <!-- PROJECT 03 -->
+
+        <article class="project-card">
+
+          <div class="project-visual visual-rf">
+
+            <span class="project-number">PROJECT_03</span>
+
+            <div class="radar-grid">
+              <div class="radar-circle circle-1"></div>
+              <div class="radar-circle circle-2"></div>
+              <div class="radar-circle circle-3"></div>
+              <div class="radar-sweep"></div>
+              <div class="radar-point"></div>
+            </div>
+
+            <div class="visual-label label-rf">
+              RF / SIGNAL
+            </div>
+
+            <div class="view-project">
+              VIEW PROJECT <span>↗</span>
+            </div>
+
+          </div>
+
+          <div class="project-info">
+
+            <div class="project-meta">
+              <span>003</span>
+              <span>RF // COMMUNICATIONS</span>
+            </div>
+
+            <h3 class="project-title">
+              RF Communication & Embedded Control
+            </h3>
+
+            <p class="project-desc">
+              Exploration of embedded communication systems involving
+              sensor acquisition, wireless transmission and real-time
+              control of connected devices.
+            </p>
+
+            <div class="project-tags">
+              <span>RF</span>
+              <span>FIRMWARE</span>
+              <span>SENSORS</span>
+              <span>COMMUNICATION</span>
+            </div>
+
+            <a href="#" class="project-link">
+              EXPLORE PROJECT
+              <span>↗</span>
+            </a>
+
+          </div>
+
+        </article>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         ABOUT
+    ========================================================== -->
+
+    <section id="about" class="section about-section section-anchor reveal">
+
+      <div class="section-heading">
+
+        <div>
+          <span class="section-index">03 // PROFILE</span>
+          <h2 class="section-title">
+            ABOUT ME<span>.</span>
+          </h2>
+        </div>
+
+      </div>
+
+
+      <div class="about-grid">
+
+        <div class="about-statement">
+
+          <span class="mono-label">01 // ENGINEERING APPROACH</span>
+
+          <h3>
+            I like understanding
+            <span>how things work</span>
+            — and building them.
+          </h3>
+
+        </div>
+
+
+        <div class="about-content">
+
+          <p class="about-lead">
+            I am a Telecommunications Engineering student at
+            Universitat Rovira i Virgili, building on a previous
+            degree in Biomedical Engineering.
+          </p>
+
+          <p>
+            My engineering path has gradually moved toward the
+            intersection of <strong>electronics, embedded software
+            and communications</strong>. I am particularly interested
+            in systems where code does not exist in isolation, but
+            interacts directly with sensors, electronics and the
+            physical world.
+          </p>
+
+          <p>
+            Telecommunications engineering is allowing me to deepen
+            that foundation through areas such as radio frequency,
+            antennas, propagation, radar, digital communications,
+            electromagnetic compatibility and embedded communication
+            systems.
+          </p>
+
+          <p>
+            I am especially interested in applying these technologies
+            to <strong>automotive electronics, connected devices,
+            robotics and intelligent embedded systems</strong>.
+          </p>
+
+
+          <div class="about-interests">
+
+            <span>EMBEDDED SYSTEMS</span>
+            <span>FIRMWARE</span>
+            <span>AUTOMOTIVE</span>
+            <span>RF / ANTENNAS</span>
+            <span>RADAR</span>
+            <span>RFID</span>
+            <span>ROBOTICS</span>
+            <span>IoT</span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="education-strip">
+
+        <div class="education-item">
+
+          <span class="education-label">
+            CURRENT
+          </span>
+
+          <strong>
+            Telecommunications Engineering
+          </strong>
+
+          <span>
+            Universitat Rovira i Virgili
+          </span>
+
+        </div>
+
+        <div class="education-line"></div>
+
+        <div class="education-item">
+
+          <span class="education-label">
+            COMPLETED
+          </span>
+
+          <strong>
+            Biomedical Engineering
+          </strong>
+
+          <span>
+            Universitat Rovira i Virgili
+          </span>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         SKILLS
+    ========================================================== -->
+
+    <section id="skills" class="section skills-section section-anchor reveal">
+
+      <div class="section-heading">
+
+        <div>
+          <span class="section-index">04 // TOOLBOX</span>
+          <h2 class="section-title">
+            SKILLS<span>.</span>
+          </h2>
+        </div>
+
+        <p class="section-heading-description">
+          Technologies, engineering tools and technical foundations
+          developed through academic work and hands-on projects.
+        </p>
+
+      </div>
+
+
+      <div class="skills-layout">
+
+        <!-- EMBEDDED -->
+
+        <div class="skill-category">
+
+          <div class="skill-category-header">
+            <span>01</span>
+            <h3>EMBEDDED & SOFTWARE</h3>
+          </div>
+
+          <div class="skill-list">
+
+            <div class="skill-item">
+              <strong>C / C++</strong>
+              <span>Firmware & low-level programming</span>
+            </div>
+
+            <div class="skill-item">
+              <strong>STM32 / ESP32</strong>
+              <span>Microcontroller development</span>
+            </div>
+
+            <div class="skill-item">
+              <strong>GPIO · ADC · PWM</strong>
+              <span>Hardware peripherals</span>
+            </div>
+
+            <div class="skill-item">
+              <strong>Timers · Interrupts</strong>
+              <span>Embedded control</span>
+            </div>
+
+            <div class="skill-item">
+              <strong>Debugging</strong>
+              <span>Hardware & firmware troubleshooting</span>
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- ELECTRONICS -->
+
+        <div class="skill-category">
+
+          <div class="skill-category-header">
+            <span>02</span>
+            <h3>ELECTRONICS & HARDWARE</h3>
+          </div>
+
+          <div class="skill-list">
+
+            <div class="skill-item">
+              <strong>PCB DESIGN</strong>
+              <span>KiCad</span>
+            </div>
+
+            <div class="skill-item">
+              <strong>Oscilloscope</strong>
+              <span>Signal measurement & analysis</span>
+            </div>
+
+            <div class="skill-item">
+              <strong>Logic Analyzer</strong>
+              <span>Digital debugging</span>
+            </div>
+
+            <div class="skill-item">
+              <strong>Hardware-Software Integration</strong>
+              <span>System-level development</span>
+            </div>
+
+            <div class="skill-item">
+              <strong>3D CAD</strong>
+              <span>Fusion 360</span>
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- COMMUNICATIONS -->
+
+        <div class="skill-category">
+
+          <div class="skill-category-header">
+            <span>03</span>
+            <h3>COMMUNICATIONS</h3>
+          </div>
+
+          <div class="skill-list">
+
+            <div class="skill-item">
+              <strong>I²C · SPI · CAN</strong>
+              <span>Embedded communication protocols</span>
+            </div>
+
+            <div class="skill-item">
+              <strong>RF</strong>
+              <span>Radio frequency systems</span>
+            </div>
+
+            <div class="skill-item">
+              <strong>Antennas</strong>
+              <span>RF engineering foundations</span>
+            </div>
+
+            <div class="skill-item">
+              <strong>Radar Systems</strong>
+              <span>Detection & sensing technologies</span>
+            </div>
+
+            <div class="skill-item">
+              <strong>RFID</strong>
+              <span>Wireless identification systems</span>
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- DIGITAL / TOOLS -->
+
+        <div class="skill-category">
+
+          <div class="skill-category-header">
+            <span>04</span>
+            <h3>DIGITAL & TOOLS</h3>
+          </div>
+
+          <div class="skill-list">
+
+            <div class="skill-item">
+              <strong>VHDL / Verilog</strong>
+              <span>Digital hardware description</span>
+            </div>
+
+            <div class="skill-item">
+              <strong>FPGA</strong>
+              <span>Digital hardware systems</span>
+            </div>
+
+            <div class="skill-item">
+              <strong>Git / GitHub</strong>
+              <span>Version control</span>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- LANGUAGES -->
+
+      <div class="languages-block">
+
+        <div class="languages-header">
+
+          <span class="mono-label">05 // LANGUAGES</span>
+
+          <span class="language-note">
+            COMMUNICATION
+          </span>
+
+        </div>
+
+        <div class="languages-grid">
+
+          <div class="language">
+            <span class="language-name">Arabic</span>
+            <span class="language-level">NATIVE</span>
+          </div>
+
+          <div class="language">
+            <span class="language-name">Spanish</span>
+            <span class="language-level">NATIVE</span>
+          </div>
+
+          <div class="language">
+            <span class="language-name">Catalan</span>
+            <span class="language-level">C2</span>
+          </div>
+
+          <div class="language">
+            <span class="language-name">English</span>
+            <span class="language-level">B2</span>
+          </div>
+
+          <div class="language">
+            <span class="language-name">French</span>
+            <span class="language-level">A2</span>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         CONTACT
+    ========================================================== -->
+
+    <section id="contact" class="section contact-section section-anchor reveal">
+
+      <div class="contact-top">
+
+        <span class="section-index">05 // CONNECTION</span>
+
+        <h2 class="contact-title">
+          LET'S BUILD
+          <span>SOMETHING.</span>
+        </h2>
+
+        <p class="contact-description">
+          Interested in embedded systems, firmware, electronics,
+          RF or automotive technology? Let's connect.
+        </p>
+
+      </div>
+
+
+      <div class="contact-grid">
+
+        <a
+          href="mailto:contact@mlekraa.com"
+          class="contact-email"
+        >
+
+          <span class="contact-label">EMAIL</span>
+
+          <span class="contact-address">
+            contact@mlekraa.com
+            <span>↗</span>
+          </span>
+
+        </a>
+
+
+        <div class="contact-socials">
+
+          <a
+            href="#"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span>GITHUB</span>
+            <span>↗</span>
+          </a>
+
+          <a
+            href="#"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span>LINKEDIN</span>
+            <span>↗</span>
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =========================================================
+       FOOTER
+  ========================================================== -->
+
+  <footer class="footer">
+
+    <div>
+      MOHAMMED LEKRAA
+      <span>//</span>
+      ENGINEERING PORTFOLIO
+    </div>
+
+    <div>
+      EMBEDDED · HARDWARE · RF
+    </div>
+
+    <div>
+      © 2026
+    </div>
+
+  </footer>
+
+
+  <script src="script.js"></script>
+
+</body>
+</html>
