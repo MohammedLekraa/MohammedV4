@@ -423,7 +423,7 @@ a {
   margin: 0 auto;
 
   padding:
-    2.5rem
+    2.9rem
     3rem;
 
   border-top: 1px solid var(--border-color);
@@ -466,7 +466,7 @@ a {
 
   display: flex;
   flex-direction: column;
-  min-height: 580px;
+  min-height: 500px;
   transition:
     transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
     border-color 0.3s ease,
