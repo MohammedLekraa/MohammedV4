@@ -1,35 +1,26 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-  /* ==========================================================
+  /* =========================================
      LOADER
-  ========================================================== */
+  ========================================= */
 
   const loader = document.getElementById("loader");
   const loaderFill = document.getElementById("loader-fill");
   const loaderCounter = document.getElementById("loader-counter");
-  const loaderStatus = document.getElementById("loader-status");
 
   let progress = 0;
 
-  const loaderMessages = [
-    "BOOT_SEQUENCE",
-    "LOADING_INTERFACE",
-    "INITIALIZING_SYSTEMS",
-    "CHECKING_MODULES",
-    "READY"
-  ];
-
   const loaderInterval = setInterval(() => {
 
-    const increment = Math.floor(Math.random() * 10) + 5;
+    const increment =
+      Math.floor(Math.random() * 12) + 5;
 
     progress += increment;
 
     if (progress >= 100) {
       progress = 100;
-      clearInterval(loaderInterval);
 
-      loaderStatus.textContent = "READY";
+      clearInterval(loaderInterval);
 
       setTimeout(() => {
         loader.classList.add("hidden");
@@ -39,51 +30,158 @@ document.addEventListener("DOMContentLoaded", () => {
     loaderFill.style.width = `${progress}%`;
     loaderCounter.textContent = `${progress}%`;
 
-    const messageIndex = Math.min(
-      Math.floor(progress / 20),
-      loaderMessages.length - 1
-    );
-
-    loaderStatus.textContent = loaderMessages[messageIndex];
-
   }, 65);
 
 
-  /* ==========================================================
-     NAVIGATION
-  ========================================================== */
+  /* =========================================
+     HERO CARD TILT
+  ========================================= */
 
-  const navButtons = document.querySelectorAll(".nav-btn");
-  const sections = document.querySelectorAll(".section-anchor");
+  const card = document.getElementById("tilt-card");
+
+  if (card && window.matchMedia("(pointer: fine)").matches) {
+
+    let targetX = 0;
+    let targetY = 0;
+
+    let currentX = 0;
+    let currentY = 0;
+
+
+    document.addEventListener("mousemove", (event) => {
+
+      const x =
+        (event.clientX / window.innerWidth) - 0.5;
+
+      const y =
+        (event.clientY / window.innerHeight) - 0.5;
+
+      targetX = y * -5;
+      targetY = x * 5;
+
+    });
+
+
+    const animateTilt = () => {
+
+      currentX +=
+        (targetX - currentX) * 0.08;
+
+      currentY +=
+        (targetY - currentY) * 0.08;
+
+      card.style.transform =
+        `perspective(1100px)
+         rotateX(${currentX}deg)
+         rotateY(${currentY}deg)`;
+
+      requestAnimationFrame(animateTilt);
+    };
+
+    animateTilt();
+
+
+    card.addEventListener("mouseleave", () => {
+
+      targetX = 0;
+      targetY = 0;
+
+    });
+
+  }
+
+
+  /* =========================================
+     SCROLL REVEAL
+  ========================================= */
+
+  const reveals =
+    document.querySelectorAll(".reveal");
+
+
+  const revealObserver =
+    new IntersectionObserver(
+      (entries) => {
+
+        entries.forEach((entry) => {
+
+          if (entry.isIntersecting) {
+
+            entry.target.classList.add("active");
+
+            revealObserver.unobserve(entry.target);
+
+          }
+
+        });
+
+      },
+      {
+        threshold: 0.12
+      }
+    );
+
+
+  reveals.forEach((section) => {
+    revealObserver.observe(section);
+  });
+
+
+  /* =========================================
+     ACTIVE NAVIGATION
+  ========================================= */
+
+  const navLinks =
+    document.querySelectorAll(".nav-btn");
+
+  const sections =
+    document.querySelectorAll(
+      "#projects, #about, #skills, #contact"
+    );
+
 
   const updateActiveNavigation = () => {
 
-    const scrollPosition = window.scrollY + 180;
+    const scrollPosition =
+      window.scrollY + window.innerHeight * 0.35;
 
-    let currentSection = "home";
+
+    let currentSection = "";
+
 
     sections.forEach((section) => {
 
-      const sectionTop = section.offsetTop;
+      const sectionTop =
+        section.offsetTop;
 
-      if (scrollPosition >= sectionTop) {
+      const sectionBottom =
+        sectionTop + section.offsetHeight;
+
+
+      if (
+        scrollPosition >= sectionTop &&
+        scrollPosition < sectionBottom
+      ) {
         currentSection = section.id;
       }
 
     });
 
-    navButtons.forEach((button) => {
 
-      const sectionName = button.dataset.section;
+    navLinks.forEach((link) => {
 
-      button.classList.toggle(
-        "active",
-        sectionName === currentSection
-      );
+      link.classList.remove("active");
+
+      if (
+        link.dataset.section === currentSection
+      ) {
+        link.classList.add("active");
+      }
 
     });
 
   };
+
 
   window.addEventListener(
     "scroll",
@@ -91,179 +189,102 @@ document.addEventListener("DOMContentLoaded", () => {
     { passive: true }
   );
 
+
   updateActiveNavigation();
 
 
-  /* ==========================================================
-     MOBILE MENU
-  ========================================================== */
+  /* =========================================
+     NAVBAR HIDE/SHOW ON MOBILE
+  ========================================= */
 
-  const mobileMenu = document.getElementById("mobile-menu");
-  const navLinks = document.querySelector(".nav-links");
+  let lastScrollY = window.scrollY;
 
-  if (mobileMenu) {
+  window.addEventListener(
+    "scroll",
+    () => {
 
-    mobileMenu.addEventListener("click", () => {
-      navLinks.classList.toggle("open");
-    });
+      const currentScrollY =
+        window.scrollY;
 
-  }
+      const navbar =
+        document.querySelector(".navbar");
 
-  navButtons.forEach((button) => {
-
-    button.addEventListener("click", () => {
-      navLinks.classList.remove("open");
-    });
-
-  });
+      if (!navbar) return;
 
 
-  /* ==========================================================
-     SCROLL REVEAL
-  ========================================================== */
+      if (
+        window.innerWidth <= 650 &&
+        currentScrollY > lastScrollY &&
+        currentScrollY > 100
+      ) {
 
-  const revealElements = document.querySelectorAll(".reveal");
+        navbar.style.transform =
+          "translateY(-100%)";
 
-  const revealObserver = new IntersectionObserver(
-    (entries) => {
+      } else {
 
-      entries.forEach((entry) => {
+        navbar.style.transform =
+          "translateY(0)";
 
-        if (entry.isIntersecting) {
-          entry.target.classList.add("active");
+      }
 
-          revealObserver.unobserve(entry.target);
-        }
 
-      });
+      lastScrollY = currentScrollY;
 
     },
-    {
-      threshold: 0.12,
-      rootMargin: "0px 0px -60px 0px"
-    }
+    { passive: true }
   );
 
-  revealElements.forEach((element) => {
-    revealObserver.observe(element);
-  });
 
-
-  /* ==========================================================
-     HERO TILT
-  ========================================================== */
-
-  const card = document.getElementById("tilt-card");
-
-  if (card && window.matchMedia("(pointer: fine)").matches) {
-
-    card.addEventListener("mousemove", (event) => {
-
-      const rect = card.getBoundingClientRect();
-
-      const x =
-        (event.clientX - rect.left) /
-        rect.width;
-
-      const y =
-        (event.clientY - rect.top) /
-        rect.height;
-
-      const rotateY = (x - 0.5) * 8;
-      const rotateX = (y - 0.5) * -8;
-
-      card.style.transform = `
-        perspective(1000px)
-        rotateX(${rotateX}deg)
-        rotateY(${rotateY}deg)
-        translateY(-4px)
-      `;
-
-    });
-
-    card.addEventListener("mouseleave", () => {
-
-      card.style.transform = `
-        perspective(1000px)
-        rotateX(0deg)
-        rotateY(0deg)
-        translateY(0)
-      `;
-
-    });
-
-  }
-
-
-  /* ==========================================================
-     PROJECT CARD POINTER EFFECT
-  ========================================================== */
-
-  const projectCards =
-    document.querySelectorAll(".project-card");
-
-  projectCards.forEach((card) => {
-
-    card.addEventListener("mousemove", (event) => {
-
-      if (window.innerWidth <= 800) {
-        return;
-      }
-
-      const rect = card.getBoundingClientRect();
-
-      const x =
-        event.clientX - rect.left;
-
-      const y =
-        event.clientY - rect.top;
-
-      card.style.setProperty("--mouse-x", `${x}px`);
-      card.style.setProperty("--mouse-y", `${y}px`);
-
-    });
-
-  });
-
-
-  /* ==========================================================
+  /* =========================================
      SMOOTH ANCHOR OFFSET
-  ========================================================== */
+  ========================================= */
 
-  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+  document
+    .querySelectorAll('a[href^="#"]')
+    .forEach((link) => {
 
-    anchor.addEventListener("click", (event) => {
+      link.addEventListener("click", (event) => {
 
-      const targetId =
-        anchor.getAttribute("href");
+        const targetId =
+          link.getAttribute("href");
 
-      if (!targetId || targetId === "#") {
-        return;
-      }
+        if (
+          !targetId ||
+          targetId === "#"
+        ) {
+          return;
+        }
 
-      const target =
-        document.querySelector(targetId);
 
-      if (!target) {
-        return;
-      }
+        const target =
+          document.querySelector(targetId);
 
-      event.preventDefault();
+        if (!target) return;
 
-      const navbarHeight = 76;
 
-      const targetPosition =
-        target.getBoundingClientRect().top +
-        window.scrollY -
-        navbarHeight;
+        event.preventDefault();
 
-      window.scrollTo({
-        top: targetPosition,
-        behavior: "smooth"
+
+        const navbarHeight =
+          document.querySelector(".navbar")
+            ?.offsetHeight || 0;
+
+
+        const targetPosition =
+          target.getBoundingClientRect().top +
+          window.scrollY -
+          navbarHeight -
+          20;
+
+
+        window.scrollTo({
+          top: targetPosition,
+          behavior: "smooth"
+        });
+
       });
 
     });
-
-  });
 
 });
