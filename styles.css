@@ -380,7 +380,7 @@ a {
 
   object-fit: cover;
 
-  filter: grayscale(100%);
+  filter: grayscale(0%);
 
   transition:
     transform 0.7s cubic-bezier(0.16, 1, 0.3, 1),
@@ -389,7 +389,7 @@ a {
 
 .portrait-card:hover .card-img {
   transform: scale(1.035);
-  filter: grayscale(65%);
+  filter: grayscale(0%);
 }
 
 .status-indicator {
@@ -497,7 +497,7 @@ a {
 
   object-fit: cover;
 
-  filter: grayscale(25%);
+  filter: grayscale(0%);
 
   transition:
     transform 0.55s cubic-bezier(0.16, 1, 0.3, 1),
