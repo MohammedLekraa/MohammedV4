@@ -399,3 +399,36 @@ body,.nav,.card,.main section,.tbl,.mc{transition:background-color .35s,color .3
   height: 2px;
   background: linear-gradient(90deg, var(--ink) 0%, var(--mute) 60%, transparent 100%);
 }
+.project-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 12px;
+  margin: 0.8rem 0 1rem;
+  border: 1px solid;
+  border-radius: 999px;
+  font-family: var(--mono);
+  font-size: 0.76rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+.status-icon {
+  display: inline-grid;
+  place-items: center;
+  width: 19px;
+  height: 19px;
+  border-radius: 50%;
+  font-size: 0.8rem;
+}
+
+.project-status.completed {
+  color: #16805d;
+  background: rgba(22, 128, 93, 0.09);
+  border-color: rgba(22, 128, 93, 0.3);
+}
+
+.project-status.completed .status-icon {
+  color: #fff;
+  background: #16805d;
+}
