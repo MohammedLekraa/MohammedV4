@@ -1,4 +1,4 @@
-
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,68 +22,41 @@
     rel="stylesheet"
   >
 
-  <!-- PROJECT STATUS BADGES -->
+  <!-- COMPACT PROJECT STATUS -->
   <style>
-    .project-status {
+    .project-meta {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px 12px;
+    }
+
+    .project-state {
       display: inline-flex;
       align-items: center;
-      gap: 8px;
-      width: fit-content;
-      margin-top: 16px;
-      padding: 7px 11px;
-      border: 1px solid;
-      border-radius: 4px;
+      gap: 5px;
       font-family: "JetBrains Mono", monospace;
-      font-size: 0.68rem;
-      font-weight: 700;
-      letter-spacing: 0.07em;
+      font-size: 0.62rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
       line-height: 1.2;
-      text-transform: uppercase;
+      white-space: nowrap;
     }
 
-    .project-status .status-icon {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 17px;
-      height: 17px;
-      flex-shrink: 0;
-      border-radius: 50%;
-      font-size: 0.7rem;
-      line-height: 1;
+    .project-state .state-dot {
+      font-size: 0.65rem;
     }
 
-    .project-status.completed {
+    .project-state.completed {
       color: #16805d;
-      background: rgba(22, 128, 93, 0.08);
-      border-color: rgba(22, 128, 93, 0.3);
     }
 
-    .project-status.completed .status-icon {
-      color: #fff;
-      background: #16805d;
-    }
-
-    .project-status.in-progress {
+    .project-state.in-progress {
       color: #2369c8;
-      background: rgba(35, 105, 200, 0.08);
-      border-color: rgba(35, 105, 200, 0.3);
     }
 
-    .project-status.in-progress .status-icon {
-      color: #fff;
-      background: #2369c8;
-    }
-
-    .project-status.planned {
+    .project-state.planned {
       color: #777;
-      background: rgba(120, 120, 120, 0.07);
-      border-color: rgba(120, 120, 120, 0.3);
-    }
-
-    .project-status.planned .status-icon {
-      color: #fff;
-      background: #777;
     }
 
     .project-info {
@@ -93,11 +66,11 @@
     }
 
     .project-info .project-tags {
-      margin-top: 16px;
+      margin-top: 12px;
     }
 
     .project-info .project-link {
-      margin-top: 18px;
+      margin-top: 14px;
     }
 
     .project-card a:focus-visible {
@@ -106,7 +79,7 @@
     }
 
     @media (prefers-reduced-motion: reduce) {
-      .project-status {
+      .project-state {
         transition: none;
       }
     }
@@ -262,6 +235,10 @@
               <div class="project-meta">
                 <span class="project-num">001</span>
                 <span class="project-cat">EMBEDDED // FIRMWARE</span>
+                <span class="project-state completed">
+                  <span class="state-dot" aria-hidden="true">●</span>
+                  COMPLETED
+                </span>
               </div>
 
               <h3 class="project-title">
@@ -269,29 +246,16 @@
               </h3>
 
               <p class="project-desc">
-                Embedded robotic system capable of reproducing hand and wrist
-                movements using flex sensors, an inertial measurement unit,
-                ESP32 microcontrollers, Bluetooth communication and servo
-                actuation. The project involved hardware integration,
-                PCB work and debugging real-world system issues.
+                ESP32-based robotic arm reproducing hand and wrist movements
+                using flex sensors, an MPU6050 IMU, Bluetooth communication
+                and servo control.
               </p>
 
               <div class="project-tags">
                 <span>C/C++</span>
                 <span>ESP32</span>
                 <span>MPU6050</span>
-                <span>FLEX SENSORS</span>
-                <span>SERVO CONTROL</span>
                 <span>PCB DESIGN</span>
-              </div>
-
-              <div
-                class="project-status completed"
-                role="status"
-                aria-label="Project status: completed"
-              >
-                <span class="status-icon" aria-hidden="true">✓</span>
-                <span>Completed</span>
               </div>
 
               <span class="project-link">
@@ -305,7 +269,7 @@
         </article>
 
 
-        <!-- PROJECT 02: IN PROGRESS -->
+        <!-- PROJECT 02: PLANNED -->
 
         <article class="project-card">
 
@@ -314,7 +278,7 @@
             <span class="project-tag-top">PROJECT_02</span>
 
             <div class="view-overlay">
-              <span>IN DEVELOPMENT</span>
+              <span>FUTURE PROJECT</span>
             </div>
 
             <img
@@ -331,6 +295,10 @@
             <div class="project-meta">
               <span class="project-num">002</span>
               <span class="project-cat">AUTOMOTIVE // CAN BUS</span>
+              <span class="project-state planned">
+                <span class="state-dot" aria-hidden="true">●</span>
+                PLANNED
+              </span>
             </div>
 
             <h3 class="project-title">
@@ -338,32 +306,19 @@
             </h3>
 
             <p class="project-desc">
-              Planned two-node embedded control architecture using STM32
-              microcontrollers and CAN communication. The system is intended
-              to read sensor inputs, control a motor through PWM and implement
-              fault handling, status reporting and safe shutdown behaviour.
+              Two-node STM32 control system planned around CAN communication,
+              PWM motor control, sensor inputs and fault-handling logic.
             </p>
 
             <div class="project-tags">
-              <span>C</span>
               <span>STM32</span>
               <span>CAN BUS</span>
               <span>PWM</span>
-              <span>ADC</span>
-              <span>FAULT HANDLING</span>
-            </div>
-
-            <div
-              class="project-status in-progress"
-              role="status"
-              aria-label="Project status: in progress"
-            >
-              <span class="status-icon" aria-hidden="true">↻</span>
-              <span>In Progress</span>
+              <span>EMBEDDED C</span>
             </div>
 
             <span class="project-link">
-              DEVELOPMENT IN PROGRESS
+              PROJECT ROADMAP ↗
             </span>
 
           </div>
@@ -397,6 +352,10 @@
             <div class="project-meta">
               <span class="project-num">003</span>
               <span class="project-cat">REAL-TIME // RTOS</span>
+              <span class="project-state planned">
+                <span class="state-dot" aria-hidden="true">●</span>
+                PLANNED
+              </span>
             </div>
 
             <h3 class="project-title">
@@ -404,32 +363,19 @@
             </h3>
 
             <p class="project-desc">
-              Planned real-time embedded platform exploring concurrent tasks
-              for sensor acquisition, control, serial communication and system
-              supervision. The objective is to investigate task scheduling,
-              priorities, queues, synchronization and timing behaviour.
+              STM32 real-time platform exploring concurrent tasks for sensor
+              acquisition, control, UART communication and system supervision.
             </p>
 
             <div class="project-tags">
-              <span>C</span>
               <span>STM32</span>
               <span>FreeRTOS</span>
-              <span>RTOS TASKS</span>
               <span>UART</span>
               <span>REAL-TIME</span>
             </div>
 
-            <div
-              class="project-status planned"
-              role="status"
-              aria-label="Project status: planned"
-            >
-              <span class="status-icon" aria-hidden="true">○</span>
-              <span>Planned</span>
-            </div>
-
             <span class="project-link">
-              PROJECT ROADMAP
+              PROJECT ROADMAP ↗
             </span>
 
           </div>
@@ -697,3 +643,4 @@
 
 </body>
 </html>
+```
