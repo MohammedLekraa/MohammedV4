@@ -22,25 +22,28 @@
     rel="stylesheet"
   >
 
-  <!-- COMPACT PROJECT STATUS -->
+  <!-- COMPACT PROJECT CARDS & STATUS -->
   <style>
     .project-meta {
       display: flex;
       align-items: center;
       flex-wrap: wrap;
       gap: 8px 12px;
+      width: 100%;
     }
 
     .project-state {
       display: inline-flex;
       align-items: center;
       gap: 5px;
+      margin-left: auto;
       font-family: "JetBrains Mono", monospace;
       font-size: 0.62rem;
       font-weight: 600;
       letter-spacing: 0.04em;
       line-height: 1.2;
       white-space: nowrap;
+      flex-shrink: 0;
     }
 
     .project-state .state-dot {
@@ -65,17 +68,37 @@
       align-items: flex-start;
     }
 
+    /* Reduce vertical space inside each card */
     .project-info .project-tags {
-      margin-top: 12px;
+      margin-top: 10px;
+      gap: 6px;
     }
 
     .project-info .project-link {
-      margin-top: 14px;
+      margin-top: 12px;
+    }
+
+    .project-info .project-title {
+      margin-bottom: 8px;
+    }
+
+    .project-info .project-desc {
+      margin-bottom: 0;
     }
 
     .project-card a:focus-visible {
       outline: 2px solid currentColor;
       outline-offset: 4px;
+    }
+
+    @media (max-width: 480px) {
+      .project-meta {
+        gap: 7px 9px;
+      }
+
+      .project-state {
+        font-size: 0.58rem;
+      }
     }
 
     @media (prefers-reduced-motion: reduce) {
@@ -235,6 +258,7 @@
               <div class="project-meta">
                 <span class="project-num">001</span>
                 <span class="project-cat">EMBEDDED // FIRMWARE</span>
+
                 <span class="project-state completed">
                   <span class="state-dot" aria-hidden="true">●</span>
                   COMPLETED
@@ -255,6 +279,11 @@
                 <span>C/C++</span>
                 <span>ESP32</span>
                 <span>MPU6050</span>
+                <span>FLEX SENSORS</span>
+                <span>ADC</span>
+                <span>I2C</span>
+                <span>BLUETOOTH</span>
+                <span>SERVO CONTROL</span>
                 <span>PCB DESIGN</span>
               </div>
 
@@ -282,8 +311,8 @@
             </div>
 
             <img
-              src="Brazo1.jpg"
-              alt="Existing electronics prototype used as a temporary project image"
+              src="STM32_CAN.jpg"
+              alt="Conceptual STM32 automotive control system with CAN communication and motor control electronics"
               loading="lazy"
             >
 
@@ -295,6 +324,7 @@
             <div class="project-meta">
               <span class="project-num">002</span>
               <span class="project-cat">AUTOMOTIVE // CAN BUS</span>
+
               <span class="project-state planned">
                 <span class="state-dot" aria-hidden="true">●</span>
                 PLANNED
@@ -312,9 +342,13 @@
 
             <div class="project-tags">
               <span>STM32</span>
+              <span>EMBEDDED C</span>
               <span>CAN BUS</span>
               <span>PWM</span>
-              <span>EMBEDDED C</span>
+              <span>ADC</span>
+              <span>GPIO</span>
+              <span>MOTOR DRIVER</span>
+              <span>FAULT HANDLING</span>
             </div>
 
             <span class="project-link">
@@ -339,8 +373,8 @@
             </div>
 
             <img
-              src="Brazo4.jpg"
-              alt="Existing embedded project image used temporarily"
+              src="STM32_FreeRTOS.jpg"
+              alt="Conceptual STM32 real-time embedded system with sensor interfaces and debugging equipment"
               loading="lazy"
             >
 
@@ -352,6 +386,7 @@
             <div class="project-meta">
               <span class="project-num">003</span>
               <span class="project-cat">REAL-TIME // RTOS</span>
+
               <span class="project-state planned">
                 <span class="state-dot" aria-hidden="true">●</span>
                 PLANNED
@@ -369,8 +404,12 @@
 
             <div class="project-tags">
               <span>STM32</span>
+              <span>C</span>
               <span>FreeRTOS</span>
+              <span>GPIO</span>
+              <span>I2C / SPI</span>
               <span>UART</span>
+              <span>TASK SCHEDULING</span>
               <span>REAL-TIME</span>
             </div>
 
