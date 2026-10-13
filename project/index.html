@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
 <head>
@@ -40,7 +39,7 @@
   </div>
   <div class="vid card">
     <div class="vwrap">
-      <video controls preload="metadata" poster="project/img/principal.png"><source src="demo.mp4" type="video/mp4"></video>
+      <video controls preload="metadata" poster="img/principal.png"><source src="demo.mp4" type="video/mp4"></video>
       <div class="vmiss" hidden data-es="Añade tu vídeo como <code>demo.mp4</code> junto a este archivo">Add your video as <code>demo.mp4</code> next to this file</div>
     </div>
   </div>
@@ -77,9 +76,9 @@
     Beyond just making things move, the real challenge was tackling real-world engineering hurdles: handling analog sensor calibration, filtering IMU drift, and designing custom PCBs to keep wiring clean.
   </p>
   <figure class="card fig" style="max-width: 90%; margin: 2rem auto;">
-    <img class="zoom" src="project/sistema.png" alt="Glove, robotic arm and power supply" style="width: 100%; height: auto;">
+    <img class="zoom" src="sistema.png" alt="Glove, robotic arm and power supply" style="width: 100%; height: auto;">
     <figcaption class="mono" data-es="El sistema completo: el guante a la izquierda y el brazo con su caja y la fuente a la derecha.">
-      The complete system: the glove on the left and the arm with its box and power supply.
+      The complete system: the glove on the left and the arm with its box and power supply on the right.
     </figcaption>
   </figure>
 </section>
@@ -103,12 +102,12 @@
       <div class="card card-visual">
         <span class="card-sub" data-es="FLEXIÓN DE LOS DEDOS">FINGER FLEXION</span>
         <h4>Flex Sensor</h4>
-        <div class="card-img-wrap"><img src="project/img/flex.png" alt="Flex Sensor"></div>
+        <div class="card-img-wrap"><img src="img/flex.png" alt="Flex Sensor"></div>
       </div>
       <div class="card card-visual">
         <span class="card-sub" data-es="ROTACIÓN DE LA MUÑECA">WRIST ROTATION</span>
         <h4>IMU · MPU6050</h4>
-        <div class="card-img-wrap"><img src="project/img/mpu.png" alt="MPU6050"></div>
+        <div class="card-img-wrap"><img src="img/mpu.png" alt="MPU6050"></div>
       </div>
     </div>
     <div class="arrow">&rarr;</div>
@@ -124,12 +123,12 @@
       <div class="card card-visual">
         <span class="card-sub" data-es="FLEXIÓN DE LOS DEDOS">FINGER FLEXION</span>
         <h4 data-es="Servo + hilo">Servo + thread</h4>
-        <div class="card-img-wrap"><img src="project/img/engranaje1.png" alt="Servo with thread"></div>
+        <div class="card-img-wrap"><img src="img/engranaje1.png" alt="Servo with thread"></div>
       </div>
       <div class="card card-visual">
         <span class="card-sub" data-es="ROTACIÓN DE LA MUÑECA">WRIST ROTATION</span>
         <h4 data-es="Servo + engranajes">Servo + gears</h4>
-        <div class="card-img-wrap"><img src="project/img/engranaje2.png" alt="Servo with gears"></div>
+        <div class="card-img-wrap"><img src="img/engranaje2.png" alt="Servo with gears"></div>
       </div>
     </div>
   </div>
@@ -144,22 +143,22 @@
     <button class="mc on" data-i="0">
       <span class="pillt" data-es="Fase 01">Phase 01</span>
       <h4 data-es="Antebrazo InMoov">InMoov forearm</h4>
-      <img src="project/img/inmoov.png" alt="InMoov forearm">
+      <img src="img/inmoov.png" alt="InMoov forearm">
     </button>
     <button class="mc" data-i="1">
       <span class="pillt" data-es="Fase 02">Phase 02</span>
       <h4 data-es="Mano FlexyHand">FlexyHand hand</h4>
-      <img src="project/img/branyhand.png" alt="FlexyHand">
+      <img src="img/branyhand.png" alt="FlexyHand">
     </button>
     <button class="mc" data-i="2">
       <span class="pillt" data-es="Fase 03">Phase 03</span>
       <h4 data-es="Rediseño CAD">CAD redesign</h4>
-      <img src="project/img/rediseny.png" alt="CAD Redesign">
+      <img src="img/rediseny.png" alt="CAD Redesign">
     </button>
     <button class="mc" data-i="3">
       <span class="pillt" data-es="Fase 04">Phase 04</span>
       <h4 data-es="Brazo Ensamblado">Assembled arm</h4>
-      <img src="project/img/brazzo.png" alt="Assembled arm">
+      <img src="img/brazzo.png" alt="Assembled arm">
     </button>
   </div>
   <div class="mdet card engineering-card" id="mdet" aria-live="polite"></div>
@@ -168,7 +167,7 @@
 <section id="guant">
   <h2 data-es="04. Diseño e integración del guante de control">04. Control glove design and integration</h2>
   <p class="lead" data-es="El guante es la parte que capta el movimiento. Pasa el ratón o haz clic sobre cada etiqueta para ver qué hace cada elemento.">The glove is the part that captures the movement. Hover or click each label to see what every element does.</p>
-  <div class="co2" id="glove"><img class="zoom" src="project/img/guante.png" alt="Sensor glove with the electronics box"></div>
+  <div class="co2" id="glove"><img class="zoom" src="img/guante.png" alt="Sensor glove with the electronics box"></div>
   <div class="card" data-tabs style="margin-top:1.4rem">
     <div class="tabs">
       <button class="tab on" data-k="flex" data-es="Sensores de flexión">Flex sensors</button>
@@ -212,7 +211,7 @@
       </div>
     </div>
     <figure class="card fig" style="margin: 0 auto;">
-      <img class="zoom" src="project/img/flextension.png" alt="Flex sensor resistance when bent">
+      <img class="zoom" src="img/flextension.png" alt="Flex sensor resistance when bent">
       <figcaption class="mono" data-es="Comportamiento de la resistencia según la flexión.">Resistance behavior according to bend.</figcaption>
     </figure>
   </div>
@@ -229,7 +228,7 @@
       </p>
       <p class="eq">ADC = Vout / 3.3 &middot; 4095</p>
     </div>
-    <figure class="card fig" style="margin: 0 auto;"><img class="zoom" src="project/img/divisortension.png" alt="Voltage divider with the flex sensor"></figure>
+    <figure class="card fig" style="margin: 0 auto;"><img class="zoom" src="img/divisortension.png" alt="Voltage divider with the flex sensor"></figure>
   </div>
 
   <h3 data-es="Qué resistencia fija elegir">Which fixed resistor to choose</h3>
@@ -266,10 +265,12 @@
   </div>
 </section>
 
+  
 <section id="imu">
   <h2 data-es="06. IMU MPU6050: rotación de la muñeca" data-en="06. IMU MPU6050: wrist rotation">06. IMU MPU6050: wrist rotation</h2>
   
   <div class="grid2 mid-al" style="align-items: center; margin-bottom: 1.5rem;">
+    <!-- Columna Izquierda: Explicación mejorada -->
     <div>
       <p class="lead" data-es="La rotación de la muñeca se mide con una IMU MPU6050, un sensor que combina un giroscopio de 3 ejes y un acelerómetro de 3 ejes." data-en="Wrist rotation is measured with an MPU6050 IMU, a sensor combining a 3-axis gyroscope and a 3-axis accelerometer.">
         La rotación de la muñeca se mide con una IMU MPU6050, un sensor que combina un giroscopio de 3 ejes y un acelerómetro de 3 ejes.
@@ -277,14 +278,17 @@
       <p data-es="Obtener una lectura estable y sin saltos requirió superar varios desafíos técnicos. El camino completo se divide en cinco etapas interactivas que puedes explorar paso a paso:" data-en="Obtaining a stable, jump-free reading required overcoming several technical challenges. The complete path is divided into five interactive stages that you can explore step by step:">
         Obtener una lectura estable y sin saltos requirió superar varios desafíos técnicos. El camino completo se divide en cinco etapas interactivas que puedes explorar paso a paso:
       </p>
+      
+      <!-- Pequeños puntos clave para rellenar visualmente el espacio -->
       <ul style="list-style: none; padding: 0; margin-top: 0.8rem; font-size: 0.88rem; display: flex; flex-direction: column; gap: 0.4rem;">
         <li><span style="font-family: var(--mono); color: var(--ink); font-weight: 600;">// Interfaz I2C:</span> Comunicación rápida y directa con el ESP32.</li>
         <li><span style="font-family: var(--mono); color: var(--ink); font-weight: 600;">// Fusión de datos:</span> Combinación de giroscopio y acelerómetro mediante filtros.</li>
       </ul>
     </div>
 
+    <!-- Columna Derecha: Imagen del módulo GY-521 -->
     <figure class="card fig" style="margin: 0 auto;">
-      <img class="zoom" src="project/img/modulompu.png" alt="GY-521 module with MPU6050">
+      <img class="zoom" src="img/modulompu.png" alt="GY-521 module with MPU6050">
       <figcaption class="mono" data-es="Módulo GY-521 con MPU6050, conectado al ESP32 por I2C." data-en="GY-521 module with MPU6050, connected to the ESP32 over I2C.">
         Módulo GY-521 con MPU6050, conectado al ESP32 por I2C.
       </figcaption>
@@ -300,29 +304,29 @@
       <p data-es="El giroscopio no mide el ángulo, sino la <b>velocidad angular</b>: lo rápido que gira el sensor. Se configuró en el rango de ±250 °/s, porque la muñeca humana no supera esa velocidad y así se obtiene la máxima resolución: 131 unidades por cada °/s. Para llegar a los grados se siguen cuatro pasos: leer el valor crudo <code>gx</code>, restarle el sesgo medido en reposo, dividir entre 131 para tener °/s e <b>integrar</b> la velocidad en el tiempo, es decir, sumar ·dt al ángulo anterior en cada paso.">The gyroscope does not measure the angle but the <b>angular velocity</b>: how fast the sensor turns. It was set to the ±250 °/s range, because the human wrist does not exceed that speed and this gives the highest resolution: 131 units per °/s. To get degrees there are four steps: read the raw value <code>gx</code>, subtract the bias measured at rest, divide by 131 to get °/s, and <b>integrate</b> the velocity over time, that is, add ·dt to the previous angle at every step.</p>
       <p class="eq"> = (gx  offset) / 131 &nbsp;&nbsp; roll_gyro = roll +  · dt</p>
       <div class="gal">
-        <figure class="fig"><img class="zoom" src="project/img/gyro-raw.png" alt="Raw gyroscope reading"><figcaption class="mono" data-es="1. Lectura cruda gx (LSB)">1. Raw reading gx (LSB)</figcaption></figure>
-        <figure class="fig"><img class="zoom" src="project/img/gyro-omega.png" alt="Angular velocity"><figcaption class="mono" data-es="2. Velocidad angular  (°/s)">2. Angular velocity  (°/s)</figcaption></figure>
-        <figure class="fig"><img class="zoom" src="project/img/gyro-angle.png" alt="Angle after integration"><figcaption class="mono" data-es="3. Ángulo al integrar ">3. Angle after integrating </figcaption></figure>
+        <figure class="fig"><img class="zoom" src="img/gyro-raw.png" alt="Raw gyroscope reading"><figcaption class="mono" data-es="1. Lectura cruda gx (LSB)">1. Raw reading gx (LSB)</figcaption></figure>
+        <figure class="fig"><img class="zoom" src="img/gyro-omega.png" alt="Angular velocity"><figcaption class="mono" data-es="2. Velocidad angular  (°/s)">2. Angular velocity  (°/s)</figcaption></figure>
+        <figure class="fig"><img class="zoom" src="img/gyro-angle.png" alt="Angle after integration"><figcaption class="mono" data-es="3. Ángulo al integrar ">3. Angle after integrating </figcaption></figure>
       </div>
     </div>
 
     <div class="st-p">
       <h3 data-es="2. El giroscopio tiene un problema: la deriva">2. The gyroscope has a problem: drift</h3>
       <p data-es="El ángulo obtenido es muy suave a corto plazo, pero acumula error con el tiempo. Incluso imprecisiones pequeñas, como 0,1 °/s con el sensor quieto, se van sumando en cada iteración. En la gráfica el sensor estaba completamente inmóvil y aun así el ángulo calculado se aleja unos <b>3,5°</b> en unos quince minutos. Con una prueba más larga la desviación sería aún mayor. El giroscopio solo no basta para una medida estable a largo plazo.">The angle obtained is very smooth in the short term, but it accumulates error over time. Even small inaccuracies, such as 0.1 °/s with the sensor still, add up at every iteration. In the plot the sensor was completely motionless and yet the computed angle drifts about <b>3.5°</b> in roughly fifteen minutes. With a longer test the deviation would be even larger. The gyroscope alone is not enough for a stable long-term measurement.</p>
-      <figure class="fig"><img class="zoom" src="project/img/deriva.png" alt="Gyroscope drift with the sensor still"><figcaption class="mono" data-es="Ángulo solo con el giroscopio y el sensor inmóvil: la deriva crece con el tiempo.">Angle from the gyroscope only, with the sensor still: the drift grows over time.</figcaption></figure>
+      <figure class="fig"><img class="zoom" src="img/deriva.png" alt="Gyroscope drift with the sensor still"><figcaption class="mono" data-es="Ángulo solo con el giroscopio y el sensor inmóvil: la deriva crece con el tiempo.">Angle from the gyroscope only, with the sensor still: the drift grows over time.</figcaption></figure>
     </div>
 
     <div class="st-p">
       <h3 data-es="3. Añado el acelerómetro y un filtro complementario">3. I add the accelerometer and a complementary filter</h3>
       <p data-es="El acelerómetro da un ángulo absoluto respecto a la gravedad, calculated con la arcotangente de dos de sus componentes. No tiene deriva, pero es ruidoso y le afectan las aceleraciones lineales. Para aprovechar lo mejor de cada sensor apliqué un <b>filtro complementario</b>: el giroscopio domina el comportamiento rápido y suave, y el acelerómetro corrige lentamente el error acumulado.">The accelerometer gives an absolute angle relative to gravity, computed with the arctangent of two of its components. It has no drift, but it is noisy and affected by linear accelerations. To take the best of each sensor I applied a <b>complementary filter</b>: the gyroscope dominates the fast, smooth behaviour, and the accelerometer slowly corrects the accumulated error.</p>
       <p class="eq">roll_acc = atan2(ay, az) &nbsp;&nbsp; roll = 0.98 · roll_gyro + 0.02 · roll_acc</p>
-      <figure class="fig"><img class="zoom" src="project/img/filtro.png" alt="Complementary filter output"><figcaption class="mono" data-es="Ángulo tras el filtro, con el sensor quieto: se mantiene estable y sin deriva.">Angle after the filter, with the sensor still: it stays stable with no drift.</figcaption></figure>
+      <figure class="fig"><img class="zoom" src="img/filtro.png" alt="Complementary filter output"><figcaption class="mono" data-es="Ángulo tras el filtro, con el sensor quieto: se mantiene estable y sin deriva.">Angle after the filter, with the sensor still: it stays stable with no drift.</figcaption></figure>
     </div>
 
     <div class="st-p">
       <h3 data-es="4. Un nuevo problema: el salto de 180° a 179°">4. A new problem: the jump from 180° to 179°</h3>
       <p data-es="Al probar el sistema con el servo apareció un comportamiento extraño: al llegar a unos 179°, el ángulo pasaba de golpe a 179° y el servo daba un movimiento brusco en sentido contrario al giro real. No era un error de medida, sino que cada sensor representa el ángulo con un rango distinto. El giroscopio se integra de forma continua y puede pasar de 180°, mientras que el acelerómetro, al usar <code>atan2</code>, queda siempre entre 180° y 180°. Una misma posición puede ser 181° para un sensor y 179° para el otro.">When testing the system with the servo, a strange behaviour appeared: on reaching about 179°, the angle suddenly became 179° and the servo made an abrupt move opposite to the real rotation. It was not a measurement error: each sensor represents the angle with a different range. The gyroscope is integrated continuously and can go past 180°, while the accelerometer, using <code>atan2</code>, always stays between 180° and 180°. The same position can be 181° for one sensor and 179° for the other.</p>
-      <figure class="fig"><img class="zoom" src="project/img/salto-roll.png" alt="Accelerometer angle and filtered angle with the jump at ±180°"><figcaption class="mono" data-es="El ángulo del acelerómetro (azul) cambia de signo al cruzar ±180° mientras el filtrado (naranja) sigue creciendo.">The accelerometer angle (blue) changes sign when crossing ±180° while the filtered one (orange) keeps growing.</figcaption></figure>
+      <figure class="fig"><img class="zoom" src="img/salto-roll.png" alt="Accelerometer angle and filtered angle with the jump at ±180°"><figcaption class="mono" data-es="El ángulo del acelerómetro (azul) cambia de signo al cruzar ±180° mientras el filtrado (naranja) sigue creciendo.">The accelerometer angle (blue) changes sign when crossing ±180° while the filtered one (orange) keeps growing.</figcaption></figure>
     </div>
 
     <div class="st-p">
@@ -330,7 +334,7 @@
       <p data-es="Antes de aplicar el filtro se compara el ángulo del acelerómetro con el del giroscopio. Si la diferencia supera ±180°, los dos representan la misma orientación en vueltas distintas, y se suma o resta una vuelta completa (360°) para alinearlos.">Before applying the filter, the accelerometer angle is compared with the gyroscope angle. If the difference exceeds ±180°, both represent the same orientation on different turns, and a full turn (360°) is added or subtracted to align them.</p>
       <p class="eq"> = roll_acc  roll_gyro &nbsp;&nbsp;  &gt; 180°  roll_acc  360° &nbsp;&nbsp;  &lt; 180°  roll_acc + 360°</p>
       <p data-es="Así el ángulo es continuo y estable incluso al pasar de ±180°. Antes de enviarlo al servo se limita entre 0° y 180° y se escala con un factor de 1,82 para adaptar el rango detectado por la IMU al recorrido del servo. Cuando el giro real supera los 180° el valor se satura en el máximo, y lo mismo por debajo de 0°. El servo nunca hace movimientos bruscos ni inversiones.">This way the angle is continuous and stable even when passing ±180°. Before sending it to the servo it is limited between 0° and 180° and scaled by a factor of 1.82 to fit the range detected by the IMU to the servo travel. When the real rotation exceeds 180° the value saturates at the maximum, and likewise below 0°. The servo never makes abrupt moves or reversals.</p>
-      <figure class="fig"><img class="zoom" src="project/img/roll-correcte.png" alt="Final roll angle between 0° and 180°"><figcaption class="mono" data-es="Ángulo final tras el filtro y la corrección: limitado entre 0° y 180°, sin saltos.">Final angle after the filter and the correction: limited between 0° and 180°, no jumps.</figcaption></figure>
+      <figure class="fig"><img class="zoom" src="img/roll-correcte.png" alt="Final roll angle between 0° and 180°"><figcaption class="mono" data-es="Ángulo final tras el filtro y la corrección: limitado entre 0° y 180°, sin saltos.">Final angle after the filter and the correction: limited between 0° and 180°, no jumps.</figcaption></figure>
     </div>
     <div class="st-ctl"><button class="btn st-prev" data-es="&larr; Anterior">&larr; Previous</button><button class="btn st-next" data-es="Siguiente &rarr;">Next &rarr;</button></div>
   </div>
@@ -366,9 +370,10 @@
     During early tests, moving multiple servos simultaneously caused reboots. To solve this, all grounds (GND) remain strictly connected, as PWM signals require a common electrical reference.
   </p><div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; margin-top: 1.5rem;">
     
+    <!-- Tarjeta 1 (Texto arriba, imagen abajo) -->
     <div class="card" style="display: flex; flex-direction: column-reverse; justify-content: space-between; margin: 0; padding: 1rem; text-align: center;">
       <div style="width: 100%; height: 160px; overflow: hidden; border-radius: 6px; background: var(--line);">
-        <img class="zoom" src="project/img/alim-guant.png" alt="Glove board" style="width: 100%; height: 100%; object-fit: cover;">
+        <img class="zoom" src="img/alim-guant.png" alt="Glove board" style="width: 100%; height: 100%; object-fit: cover;">
       </div>
       <div style="margin-bottom: 1rem;">
         <h4 style="font-size: 1rem; margin-bottom: 0.3rem;" data-es="Placa del guante">Glove board</h4>
@@ -376,9 +381,10 @@
       </div>
     </div>
 
+    <!-- Tarjeta 2 (Texto arriba, imagen abajo) -->
     <div class="card" style="display: flex; flex-direction: column-reverse; justify-content: space-between; margin: 0; padding: 1rem; text-align: center;">
       <div style="width: 100%; height: 160px; overflow: hidden; border-radius: 6px; background: var(--line);">
-        <img class="zoom" src="project/img/alim-brac.png" alt="Arm board" style="width: 100%; height: 100%; object-fit: cover;">
+        <img class="zoom" src="img/alim-brac.png" alt="Arm board" style="width: 100%; height: 100%; object-fit: cover;">
       </div>
       <div style="margin-bottom: 1rem;">
         <h4 style="font-size: 1rem; margin-bottom: 0.3rem;" data-es="Placa del brazo">Arm board</h4>
@@ -386,9 +392,10 @@
       </div>
     </div>
 
+    <!-- Tarjeta 3 (Texto arriba, imagen abajo + zoom negativo / contain) -->
     <div class="card" style="display: flex; flex-direction: column-reverse; justify-content: space-between; margin: 0; padding: 1rem; text-align: center;">
       <div style="width: 100%; height: 160px; overflow: hidden; border-radius: 6px; background: var(--line); display: flex; align-items: center; justify-content: center;">
-        <img class="zoom" src="project/img/alim-servos.png" alt="Servomotors" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+        <img class="zoom" src="img/alim-servos.png" alt="Servomotors" style="max-width: 100%; max-height: 100%; object-fit: contain;">
       </div>
       <div style="margin-bottom: 1rem;">
         <h4 style="font-size: 1rem; margin-bottom: 0.3rem;" data-es="Servomotores">Servomotors</h4>
